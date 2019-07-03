@@ -1,0 +1,15 @@
+<%= form_for(@employee) do |f| %>
+  <%=f.label "Employee First Name"%>
+  <%=f.text_field :first_name %>
+  <%=f.label "Employee Last Name"%>
+  <%=f.text_field :first_name %>
+  <%=f.label "Employee Alias"%>
+  <%=f.text_field :alias %>
+  <%=f.label "Employee Title"%>
+  <%=f.text_field :title %>
+  <%=f.label "Employee Office"%>
+  <%=f.text_field :office %>
+  <%=f.label "Reports to:"%>
+  <%=f.collection_select(:dog_id, @dogs, :id, :name)%>
+  <%=f.submit "Add Employee Profile"%>
+<% end %>
